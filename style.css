@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.calculatrice {
+    border: 1px solid red;
+    width: 400px;
+    height: 600px;
+    margin: auto;
+}
+
+.ecran-calculatrice {
+    border: 1px solid green;
+    width: 350px;
+    height: 80px;
+    margin: 20px;
+}
+
+.clavier-calculatrice {
+    border: 1px solid blue;
+    width: 350px;
+    height: 450px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.conteneur-clavier-chiffres {
+    border: 1px solid red;
+    width: 200px;
+    height: 400px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.clavier-chiffres-calculatrice {
+    border: 1px solid pink;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.clavier-chiffres-calculatrice-2 {
+    border: 1px solid green;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.clavier-chiffres-touches-calculatrice {
+    border: 1px solid pink;
+    width: 30%;
+    height: 30%;
+    margin: 1px;
+}
+
+.grosse-touche-clavier-chiffre {
+    border: 1px solid black;
+    width: 50%;
+    height: 100%;
+    margin: 1px;
+}
+.clavier-calculs-calculatrice {
+    border: 1px solid pink;
+    width: 100px;
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.operateur-gros-conteneur {
+    border: 1px solid orange;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.touches-operateur {
+    border: 1px solid orange;
+    width: 100%;
+    height: 25%;
+}
+
+.operateur-petit-conteneur {
+    border: 1px solid red;
+    width: 100%;
+    height: 15%;
+    margin-top: 40px;
+}
