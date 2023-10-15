@@ -21,6 +21,11 @@
     width: 350px;
     height: 80px;
     margin: 20px;
+    text-align: end;
+    font-size: 50px;
+    padding-top: 10px;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: darkslategray;
 }
 
 .clavier-calculatrice {
@@ -106,6 +111,12 @@ button {
 button:hover {
     border: 1px solid deeppink;
     background: linear-gradient(deeppink, pink);
+    box-shadow: 2px 2px 2px gray;
+}
+
+button:active {
+    border: 1px solid red;
+    background: linear-gradient(red, deeppink);
     box-shadow: 2px 2px 2px gray;
 }
 

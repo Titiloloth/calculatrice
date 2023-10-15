@@ -27,6 +27,7 @@ calculatrice.classList.add("calculatrice");
 let ecranCalculatrice = document.createElement("div");
 calculatrice.appendChild(ecranCalculatrice);
 ecranCalculatrice.classList.add("ecran-calculatrice")
+ecranCalculatrice.id = "ecran"
 
 // Clavier
 
@@ -49,9 +50,16 @@ conteneurClavierChiffres.classList.add("conteneur-clavier-chiffres");
     for (let index = 9; index >= 1; index--) {
         let clavierChiffresTouchesCalculatrice = document.createElement("button");
         clavierChiffresCalculatrice.appendChild(clavierChiffresTouchesCalculatrice);
+        clavierChiffresTouchesCalculatrice.id = index;
+        clavierChiffresTouchesCalculatrice.addEventListener('click', function(){
+            displayNumber(index);
+        })
         clavierChiffresTouchesCalculatrice.classList.add("clavier-chiffres-touches-calculatrice");
         clavierChiffresTouchesCalculatrice.textContent= index;
     }
+
+    
+    
 
     // Clavier chiffres 2
 
@@ -65,8 +73,14 @@ conteneurClavierChiffres.classList.add("conteneur-clavier-chiffres");
         grosseToucheClavierChiffre.classList.add("grosse-touche-clavier-chiffre");
         if (index == 0) {
             grosseToucheClavierChiffre.textContent = "0";
+            grosseToucheClavierChiffre.addEventListener('click', function(){
+                displayNumber(0)
+            })
         } else {
             grosseToucheClavierChiffre.textContent = ".";
+            grosseToucheClavierChiffre.addEventListener('click', function(){
+                displayNumber(".")
+            })
         }
         
     }
@@ -88,7 +102,9 @@ clavierCalculsCalculatrice.classList.add("clavier-calculs-calculatrice")
         touchesOperateur.classList.add("touches-operateur");
         touchesOperateur.textContent = TABLEAU_TOUCHES_OPERATEUR[index];
         operateurGrosConteneur.appendChild(touchesOperateur);
-            
+        touchesOperateur.addEventListener('click', function(){
+            displayOperator(TABLEAU_TOUCHES_OPERATEUR[index])
+        })
     }
 
     // Petit conteneur clavier opérateur
@@ -97,5 +113,8 @@ clavierCalculsCalculatrice.classList.add("clavier-calculs-calculatrice")
     clavierCalculsCalculatrice.appendChild(operateurPetitConteneur);
     operateurPetitConteneur.classList.add("operateur-petit-conteneur")
     operateurPetitConteneur.textContent = "="
+    operateurPetitConteneur.addEventListener('click', function(){
+        displayResultat()
+    })
 
 
