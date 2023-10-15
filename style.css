@@ -5,21 +5,25 @@
 }
 
 .calculatrice {
-    border: 1px solid red;
+    border: 3px solid pink;
+    border-radius: 5%;
+    background: linear-gradient(#FEF0F8, #FFFFFF);
+    box-shadow: 5px 5px 5px lightblue;
     width: 400px;
     height: 600px;
     margin: auto;
 }
 
 .ecran-calculatrice {
-    border: 1px solid green;
+    border: 1px solid pink;
+    background: linear-gradient(lightgray, #C4C4C4);
+    box-shadow: inset 3px 3px 3px gray;
     width: 350px;
     height: 80px;
     margin: 20px;
 }
 
 .clavier-calculatrice {
-    border: 1px solid blue;
     width: 350px;
     height: 450px;
     margin: 20px;
@@ -28,7 +32,6 @@
 }
 
 .conteneur-clavier-chiffres {
-    border: 1px solid red;
     width: 200px;
     height: 400px;
     margin: 20px;
@@ -38,7 +41,6 @@
 }
 
 .clavier-chiffres-calculatrice {
-    border: 1px solid pink;
     width: 200px;
     height: 300px;
     display: flex;
@@ -48,7 +50,6 @@
 }
 
 .clavier-chiffres-calculatrice-2 {
-    border: 1px solid green;
     width: 200px;
     height: 100px;
     display: flex;
@@ -57,19 +58,22 @@
 
 .clavier-chiffres-touches-calculatrice {
     border: 1px solid pink;
+    border-radius: 50px;
+    box-shadow: 2px 2px 2px lightblue;
     width: 30%;
     height: 30%;
     margin: 1px;
 }
 
 .grosse-touche-clavier-chiffre {
-    border: 1px solid black;
+    border: 1px solid pink;
+    border-radius: 30px;
+    box-shadow: 2px 2px 2px lightblue;
     width: 50%;
     height: 100%;
     margin: 1px;
 }
 .clavier-calculs-calculatrice {
-    border: 1px solid pink;
     width: 100px;
     height: 400px;
     margin-top: 20px;
@@ -78,7 +82,6 @@
 }
 
 .operateur-gros-conteneur {
-    border: 1px solid orange;
     width: 100%;
     height: 75%;
     display: flex;
@@ -86,13 +89,30 @@
 }
 
 .touches-operateur {
-    border: 1px solid orange;
+    border: 1px solid pink;
+    border-radius: 50px;
+    box-shadow: 2px 2px 2px lightblue;
     width: 100%;
     height: 25%;
+    margin: 3px;
+}
+
+button {
+    background: linear-gradient(pink, #F9D0E8);
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+button:hover {
+    border: 1px solid deeppink;
+    background: linear-gradient(deeppink, pink);
+    box-shadow: 2px 2px 2px gray;
 }
 
 .operateur-petit-conteneur {
-    border: 1px solid red;
+    border: 1px solid pink;
+    border-radius: 50px;
+    box-shadow: 2px 2px 2px lightblue;
     width: 100%;
     height: 15%;
     margin-top: 40px;

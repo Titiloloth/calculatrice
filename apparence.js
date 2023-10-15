@@ -1,3 +1,5 @@
+const TABLEAU_TOUCHES_OPERATEUR = ["+", "-", "/", "x"]
+
 // Conteneur
 
 let main = document.createElement("div");
@@ -44,11 +46,12 @@ conteneurClavierChiffres.classList.add("conteneur-clavier-chiffres");
     conteneurClavierChiffres.appendChild(clavierChiffresCalculatrice);
     clavierChiffresCalculatrice.classList.add("clavier-chiffres-calculatrice");
 
-        for (let index = 1; index < 10; index++) {
-            let clavierChiffresTouchesCalculatrice = document.createElement("div");
-            clavierChiffresCalculatrice.appendChild(clavierChiffresTouchesCalculatrice);
-            clavierChiffresTouchesCalculatrice.classList.add("clavier-chiffres-touches-calculatrice");
-            clavierChiffresTouchesCalculatrice.textContent= index;}
+    for (let index = 9; index >= 1; index--) {
+        let clavierChiffresTouchesCalculatrice = document.createElement("button");
+        clavierChiffresCalculatrice.appendChild(clavierChiffresTouchesCalculatrice);
+        clavierChiffresTouchesCalculatrice.classList.add("clavier-chiffres-touches-calculatrice");
+        clavierChiffresTouchesCalculatrice.textContent= index;
+    }
 
     // Clavier chiffres 2
 
@@ -56,11 +59,17 @@ conteneurClavierChiffres.classList.add("conteneur-clavier-chiffres");
     conteneurClavierChiffres.appendChild(clavierChiffresCalculatrice2);
     clavierChiffresCalculatrice2.classList.add("clavier-chiffres-calculatrice-2");
 
-        for (let index = 0; index < 2; index++) {
-            let grosseToucheClavierChiffre = document.createElement("div");
-            clavierChiffresCalculatrice2.appendChild(grosseToucheClavierChiffre);
-            grosseToucheClavierChiffre.classList.add("grosse-touche-clavier-chiffre");
+    for (let index = 0; index < 2; index++) {
+        let grosseToucheClavierChiffre = document.createElement("button");
+        clavierChiffresCalculatrice2.appendChild(grosseToucheClavierChiffre);
+        grosseToucheClavierChiffre.classList.add("grosse-touche-clavier-chiffre");
+        if (index == 0) {
+            grosseToucheClavierChiffre.textContent = "0";
+        } else {
+            grosseToucheClavierChiffre.textContent = ".";
         }
+        
+    }
 
     // Clavier opérateurs
 
@@ -74,16 +83,19 @@ clavierCalculsCalculatrice.classList.add("clavier-calculs-calculatrice")
     clavierCalculsCalculatrice.appendChild(operateurGrosConteneur);
     operateurGrosConteneur.classList.add("operateur-gros-conteneur")
 
-        for (let index = 0; index < 4; index++) {
-            let touchesOperateur = document.createElement("div")
-            operateurGrosConteneur.appendChild(touchesOperateur)
-            touchesOperateur.classList.add("touches-operateur")
+    for (let index = 0; index < 4; index++) {
+        let touchesOperateur = document.createElement("button");
+        touchesOperateur.classList.add("touches-operateur");
+        touchesOperateur.textContent = TABLEAU_TOUCHES_OPERATEUR[index];
+        operateurGrosConteneur.appendChild(touchesOperateur);
             
-        }
+    }
 
     // Petit conteneur clavier opérateur
     
-    let operateurPetitConteneur = document.createElement("div");
+    let operateurPetitConteneur = document.createElement("button");
     clavierCalculsCalculatrice.appendChild(operateurPetitConteneur);
     operateurPetitConteneur.classList.add("operateur-petit-conteneur")
+    operateurPetitConteneur.textContent = "="
+
 
