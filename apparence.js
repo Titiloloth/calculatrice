@@ -1,4 +1,4 @@
-const TABLEAU_TOUCHES_OPERATEUR = ["+", "-", "/", "x"]
+const TABLEAU_TOUCHES_OPERATEUR = ["+", "-", "/", "*"]
 
 // Conteneur
 

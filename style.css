@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: dotty;
+    src : url(assets/police/dotty.regular.ttf);
+}
+
 .calculatrice {
     border: 3px solid pink;
     border-radius: 5%;
@@ -22,9 +27,9 @@
     height: 80px;
     margin: 20px;
     text-align: end;
-    font-size: 50px;
+    font-size: 100px;
     padding-top: 10px;
-    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'dotty';
     color: darkslategray;
 }
 
