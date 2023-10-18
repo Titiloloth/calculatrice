@@ -1,4 +1,4 @@
-const TABLEAU_TOUCHES_OPERATEUR = ["+", "-", "/", "*"]
+const TABLEAU_TOUCHES_OPERATEUR = ["CC", "+", "-", "/", "*"]
 
 // Conteneur
 
@@ -97,14 +97,20 @@ clavierCalculsCalculatrice.classList.add("clavier-calculs-calculatrice")
     clavierCalculsCalculatrice.appendChild(operateurGrosConteneur);
     operateurGrosConteneur.classList.add("operateur-gros-conteneur")
 
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 5; index++) {
         let touchesOperateur = document.createElement("button");
         touchesOperateur.classList.add("touches-operateur");
         touchesOperateur.textContent = TABLEAU_TOUCHES_OPERATEUR[index];
         operateurGrosConteneur.appendChild(touchesOperateur);
-        touchesOperateur.addEventListener('click', function(){
-            displayOperator(TABLEAU_TOUCHES_OPERATEUR[index])
-        })
+        if (TABLEAU_TOUCHES_OPERATEUR[index] == "CC"){
+            touchesOperateur.addEventListener("click", function(){
+               deleteScreen()
+            } )
+        } else {
+            touchesOperateur.addEventListener('click', function(){
+                displayOperator(TABLEAU_TOUCHES_OPERATEUR[index])
+            })
+        }
     }
 
     // Petit conteneur clavier opérateur

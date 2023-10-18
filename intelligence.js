@@ -41,6 +41,10 @@ function displayNumber(numberToDisplay) {
     // console.log(nombreUn)
  }
 
+ function deleteScreen () {
+    document.getElementById("ecran").textContent = ""
+    resultat = null
+ }
 
 function displayOperator(operatorToDisplay) {
     // if (operateur == null){
