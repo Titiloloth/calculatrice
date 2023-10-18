@@ -42,8 +42,8 @@ function displayNumber(numberToDisplay) {
  }
 
  function deleteScreen () {
-    document.getElementById("ecran").textContent = ""
-    resultat = null
+    document.getElementById("ecran").textContent = "0"
+    resultat = 0
  }
 
 function displayOperator(operatorToDisplay) {
